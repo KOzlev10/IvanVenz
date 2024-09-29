@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="author" content="Ivan i Vezzy">
+        <link rel="icon" href="img/icon.png" type="image/x-icon">
+
+        <title>Test1</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <h1>Ti si gay</h1>
+        <hr>
+        <h2><abbr title="Sasho hareswa Marin">testicals</abbr></p>
+        <img src="img/sliwi3.PNG" alt="Topki" width="320" height="320">
+        <hr>
+
+        <a href="https://kozlev10.github.io/IvanVenz/grid.html"></a><button id="Clicked">click me</button></a>
+        <hr>
+        <label id="Label">0</label><br>
+        <div id="Buttons">
+            <button class="Buttons" onclick="Store(1)">1</button></a>
+            <button class="Buttons" onclick="Store(2)">2</button></a>
+            <button class="Buttons" onclick="Store(3)">3</button></a>
+            <button class="Buttons" onclick="Plus()">+</button></a>
+        </div>
+        <div id="Buttons"></div>
+            <button class="Buttons" onclick="Store(4)">4</button></a>
+            <button class="Buttons" onclick="Store(5)">5</button></a>
+            <button class="Buttons" onclick="Store(6)">6</button></a>
+            <button class="Buttons" onclick="Minus()">-</button></a>
+        </div>
+        <div id="Buttons"></div>
+            <button class="Buttons" onclick="Store(7)">7</button></a>
+            <button class="Buttons" onclick="Store(8)">8</button></a>
+            <button class="Buttons" onclick="Store(9)">9</button></a>
+            <button class="Buttons" onclick="Multiplication()">*</button></a>
+            <div id="Buttons"></div>
+            <button class="Buttons" onclick="Store(0)">0</button></a>
+            <button class="Buttons" onclick="Equals()">=</button></a>
+            <button class="Buttons" onclick="Division()">/</button></a>
+        </div>
+        </div>
+        <script>
+            const label = document.getElementById("Label");
+            let num = [];
+            let c;
+            let b;
+            let a = [];
+            let count = 0;
+            let i = 0;
+        
+            function Store(x)
+            {
+                let m = 0;
+                a[i] = x;
+                num[c] = 0;
+                for(let n = i; n >= 0; n--)
+                {
+                    num[c] += a[m] * 10 ** n;
+                    m += 1;
+                }
+                label.textContent = num[c];
+                i++;
+            }
+            void Plus()
+            {
+                label.textContent = num[c];
+                c++;
+                num[c] = 0;
+                b = 1;
+                i = 0;
+                Equals();
+            }
+            void Minus()
+            {
+                num[c] = num[c];
+                c++;
+                num[c] = 0;
+                label.textContent = num[c];
+                b = 2;
+                i = 0;
+            }
+            void Multiplication()
+            {
+                num[c] = num[c];
+                c++;
+                num[c] = 0;
+                label.textContent = num[c];
+                b = 3;
+                i = 0;
+            }
+            void Division()
+            {
+                num[c] = num[c];
+                c++;
+                num[c] = 0;
+                label.textContent = num[c];
+                b = 4;
+                i = 0;
+            }
+            void Equals()
+            {
+                if(b == 1)
+                {
+                    count = num[0] + num[1];
+                    label.textContent = count;
+                    c = 0;
+                    i = 0;
+                }elif(b == 2)
+                {
+                    count = num[0] + num[1];
+                }
+            }
+
+        </script>
+    </body>
+</html>
